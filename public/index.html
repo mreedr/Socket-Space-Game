@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+		<title>A multiplayer game built using HTML5 canvas and WebSockets</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="style/reset.css">
+		<link rel="stylesheet" href="style/game.css">
+	</head>
+
+	<body ontouchmove="return false;">
+		<div id="gameContainer">
+		  <canvas id="gameCanvas" onmousedown="return false"></canvas>
+		  <canvas id="gameBg" onmousedown="return false"></canvas>
+		</div>
+		<script src="http://192.168.200.123:8080/socket.io/socket.io.js"></script>
+		<script src="lib/hammer.min.js"></script>
+		<script src="lib/jquery.hammer.min.js"></script>
+		<script src="js/requestAnimationFrame.js"></script>
+		<script src="js/Keys.js"></script>
+		<script src="js/Player.js"></script>
+		<script src="js/game.js"></script>
+		<script>
+			// Initialise the game
+			init();
+			animate();
+		</script>
+	</body>
+</html>
